@@ -1,5 +1,15 @@
+import { useRouter } from "next/router";
+
 function UserHomePage() {
-  return <h1>Hello user</h1>;
+  const router = useRouter();
+
+  const userId = router.query.userId;
+
+  return (
+    <h1>
+      Hello user with id <code>{userId}</code>
+    </h1>
+  );
 }
 
 export default UserHomePage;
